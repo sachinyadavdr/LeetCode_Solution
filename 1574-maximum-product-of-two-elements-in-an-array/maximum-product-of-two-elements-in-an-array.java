@@ -1,12 +1,11 @@
 class Solution {
     public int maxProduct(int[] nums) {
         int product=0;
-     for(int i=0;i<nums.length;i++){
-         for(int j=i+1;j<nums.length;j++){
-            if(product<=(nums[i]-1)*(nums[j]-1)){
-                product=(nums[i]-1)*(nums[j]-1);
-            }
-         }
-     }return product;   
+     Arrays.sort(nums);
+     int n=nums.length;
+                product=(nums[n-1]-1)*(nums[n-2]-1);
+            
+         
+    return product;   
     }
 }
