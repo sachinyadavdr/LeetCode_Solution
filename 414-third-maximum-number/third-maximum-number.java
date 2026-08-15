@@ -4,7 +4,7 @@ class Solution {
         HashSet<Integer> set=new HashSet<>();
         for(int i:nums){
             set.add(i);
-        } System.out.println(set.size());
+        } 
         int max=Integer.MIN_VALUE;
         int smax=Integer.MIN_VALUE;
         int tmax=Integer.MIN_VALUE;
