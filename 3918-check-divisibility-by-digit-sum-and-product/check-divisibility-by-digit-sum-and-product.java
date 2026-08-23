@@ -1,0 +1,18 @@
+class Solution {
+    public boolean checkDivisibility(int n) {
+        int sum=0;
+        int pro=1;
+        int m=n;
+        while(n>0){
+            int digit=n%10;
+            sum+=digit;
+            pro*=digit;
+            n/=10;
+        } int total=sum+pro;
+        System.out.println(total);
+        if(m%total==0){
+            return true;
+        }
+        return false;
+    }
+}
