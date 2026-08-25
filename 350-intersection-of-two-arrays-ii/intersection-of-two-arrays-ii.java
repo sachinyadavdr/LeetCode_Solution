@@ -15,7 +15,7 @@ class Solution {
                 i++;
                 j++;
             }
-        } System.out.println(list);
+        } 
         int arr[]=new int[list.size()];
         int k=0;
         for(int x:list){
