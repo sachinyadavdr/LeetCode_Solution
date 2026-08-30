@@ -1,7 +1,7 @@
 class Solution {
     public int minimumDeletions(int[] nums) {
         int n = nums.length;
-        int mid = n / 2;
+       
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int in = 0;
