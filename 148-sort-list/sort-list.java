@@ -10,28 +10,30 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-        ListNode t=head;
+        ListNode tem = head;
         int size=0;
-        while(t!=null){
+        while(tem!=null){
             size++;
-            t=t.next;
-        }
-        t=head;
-        int arr[]=new int [size];
-        for(int i=0;i<size;i++){
-            arr[i]=t.val;
-            t=t.next;
-        }
-        Arrays.sort(arr);
-         
-        ListNode dummy=new ListNode(-1);
-        ListNode tem=dummy;
-        int i=0;
-        while(i<size){
-            tem.next=new ListNode(arr[i]);
             tem=tem.next;
+        }
+        tem=head;
+        int[] arr = new int[size];
+        int i = 0;
+        while (tem != null) {
+            arr[i] = tem.val;
+            tem = tem.next;
             i++;
         }
-        return   dummy.next;
-    } 
+        Arrays.sort(arr);
+        int n = arr.length;
+        ListNode dummy = new ListNode(-1);
+        ListNode t = dummy;
+        for (int j = 0; j < n; j++) {
+            t.next = new ListNode(arr[j]);
+            t=t.next;
+
+        }
+
+        return dummy.next;
+    }
 }
