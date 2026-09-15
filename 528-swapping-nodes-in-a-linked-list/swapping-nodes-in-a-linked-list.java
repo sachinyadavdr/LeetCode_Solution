@@ -17,7 +17,6 @@ class Solution {
         tem1=tem1.next;
      }
      tem1=head;
-       int endk=size-k+1;
        for(int i=0;i<k-1;i++){
         tem1=tem1.next;
        } 
