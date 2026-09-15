@@ -17,29 +17,17 @@ class Solution {
         tem1=tem1.next;
      }
      tem1=head;
-      int arr[]=new int [size];
-        for(int i=0;i<size;i++){
-            arr[i]=tem1.val;
-            tem1=tem1.next;
-        }
-       
-        int l=0;
-        int r=arr.length-1;
-        int p=arr.length-k;
-        while(l<k-1&& r>=p){
-            l++;
-            r--;
-
-        }
-        int t=arr[l];
-        arr[l]=arr[r];
-        arr[r]=t;
-        ListNode dummy=new ListNode(-1);
-        ListNode temp=dummy;
-        for(int i=0;i<size;i++){
-            temp.next=new ListNode(arr[i]);
-            temp=temp.next;
-        }
-  return dummy.next;
+       int endk=size-k+1;
+       for(int i=0;i<k-1;i++){
+        tem1=tem1.next;
+       } 
+       ListNode t=head;
+       for(int i=0;i<size-k;i++){
+        t=t.next;
+       } 
+       int p=tem1.val;
+       tem1.val=t.val;
+       t.val=p;
+       return head;
     }
 }
