@@ -17,11 +17,12 @@ class Solution {
         tem1=tem1.next;
      }
      tem1=head;
+       int endk=size-k;
        for(int i=0;i<k-1;i++){
         tem1=tem1.next;
        } 
        ListNode t=head;
-       for(int i=0;i<size-k;i++){
+       for(int i=0;i<endk;i++){
         t=t.next;
        } 
        int p=tem1.val;
