@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isPerfectSquare(int num) {
+
+        int l = 1;
+        int r = num ;
+        while (l <= r) {
+        int mid=(l+r)/2;
+         if((long)mid*mid>num){
+            r=mid-1;
+         }else if((long)mid*mid<num){
+            l=mid+1;
+         }else if((long)mid*mid==num){
+            return true;
+         }
+
+        }return false;
+    }
+}
