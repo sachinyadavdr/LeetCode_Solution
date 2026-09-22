@@ -1,11 +1,21 @@
 class Solution {
     public int fib(int n) {
-       return fibnumber(n);  
-    }
-     int fibnumber(int n){
-        if(n==0||n==1){
-            return n;
+        int a=0;
+        int b=1;
+        int tem=0;
+        if(n==0){
+            return 0;
+
         }
-        return fibnumber(n-1)+fibnumber(n-2);
-     }
+        else if(n==1){
+            return 1;
+        }
+        else{
+         for( int i=1; i<n;i++){
+            tem=a+b;
+            a=b;
+            b=tem;
+         }return tem;
+        }
+    }
 }
