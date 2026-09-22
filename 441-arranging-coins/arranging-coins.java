@@ -1,7 +1,7 @@
 class Solution {
     public int arrangeCoins(int n) {
-        
-      return (sqr(8L*n+1)-1)/2;
+        long m=n;
+      return (sqr(8*m+1)-1)/2;
     }
 
      public int sqr(long n){
