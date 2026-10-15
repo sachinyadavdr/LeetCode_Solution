@@ -5,5 +5,4 @@ join Employee  m
 on  e.id=m.managerId
 group by m.managerId
 having count(*)>4
--- where e.id=e.managerId
 
