@@ -14,13 +14,10 @@ class Solution {
         int size = 0;
         while (tem != null) {
             size++;
-
             tem = tem.next;
         }
-        System.out.println(size);
         tem = head;
         int t = size - n - 1;
-        System.out.println(t);
         if(t<0){
             return head.next;
         }
