@@ -15,10 +15,8 @@ StringBuilder x = new StringBuilder();
         while(tem!=null){
             x.append(tem.val);
             tem=tem.next;
-
         }
         int y=Integer.parseInt(x.toString(),2);
-        
         return y;
     }
 }
